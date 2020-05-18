@@ -57,6 +57,11 @@ pip install google-api-python-client
 - If the file name is different, please remember to edit it. 
 - Please record how many URLs are removed if needed. 
 - (Normally, the common websites should be removed at the step of scraping.) 
+- You will get a file "GoogleAPI_cleaned.csv" as the results at this step.
+
+### Run the file "fuzzy_matching.py" to get the fuzzy scores.
+
+### Run the file "pick_up.py" to get the good-matching URLs.
 
 
 			
