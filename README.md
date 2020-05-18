@@ -44,6 +44,22 @@ pip install google-api-python-client
 - record running time if needed
 - copy and paste the data from the data frame "my_result" to the csv file you create.
 
+#### The results you will have from Google API:
+
+| Company | DisplayLink | Website | Title |
+| ------- | ----------- | ------- | ----- |
+| Wiberg Corporation | wiberg.ca | http://wiberg.ca/ | Wiberg Corporation |
+| Wiberg Corporation | www.perfumerflavorist.com | https://www.perfumerflavorist.com/networking/news/company/IFF-Completes-Buyout-of-Wiberg-Corporation--510758411.html | IFF Completes Buyout of Wiberg Corporation |
+| ... | ... | ... | ... |
+
+### Then open the file "Cleaning.py" and run it.
+
+- If the file name is different, please remember to edit it. 
+- Please record how many URLs are removed if needed. 
+- (Normally, the common websites should be removed at the step of scraping.) 
+
+
+			
 
 
 
