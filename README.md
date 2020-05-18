@@ -4,7 +4,7 @@
 
 ### Preparation before using Google Custom API:
 
-#### 1) A company-name list. Format is shown as below:
+#### 1) A company-name list. Format examples are shown as below:
 
 | Company_name |
 | ------------ |
@@ -18,5 +18,7 @@
 
 #### 2) API keys and custom engine ID
 
-Please have a look at the document "PREP_GoogleAPI" attached in the list. 
+API key:https://console.cloud.google.com/home/
+Custom engine ID:https://cse.google.com/cse/create/new
 
+More informatino in the document "PREP_GoogleAPI".
