@@ -28,13 +28,14 @@ def remove(dataframe, col):
     for i in range(len(dataframe)):
     
         temp = dataframe.iloc[i,int(col)]
-        temp2 = dataframe.iloc[i,int(col)]
+#        temp2 = dataframe.iloc[i,int(col)]
 
         for m in remove_head:
             if (temp.startswith('.') != True) and (m in temp):
                     temp = temp.lstrip(m).strip(string.punctuation)
-                    temp2 = temp.lstrip(m).strip(string.punctuation)
-
+                    
+        temp2 = temp 
+        
         for n in remove_tail:
             if (temp.endswith('.') != True) and (n in temp):
                     temp = temp.rstrip(n).strip(string.punctuation)
