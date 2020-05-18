@@ -63,9 +63,8 @@ pip install google-api-python-client
 
 ### Run the file "pick_up.py" to get the good-matching URLs.
 
-
-			
-
-
-
-
+- Perfect-matching URLs are those with fuzzy scores for both URLs and titles greater than 70
+- Good-matching URLs are those with a fuzzy score for titles greater than 90 and a fuzzy score for URLs greater than 40.
+- Record how many perfect-matching URLs and good-matching URLs, if needed!
+- The perfect matching is not 100 percent matching but all of the URLs are highly related.
+- It might have the situation that one company has more than one good-matching websites.
