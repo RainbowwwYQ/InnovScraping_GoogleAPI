@@ -27,7 +27,7 @@ API key:https://console.cloud.google.com/home/
 
 Custom engine ID:https://cse.google.com/cse/create/new
 
-More informatino in the document "PREP_GoogleAPI".
+More informatino in the document "PREP_GoogleAPI". The removed company list is in the file of "remove_list.csv".
 
 
 ### Once you have your account set up, go ahead and install the library:
