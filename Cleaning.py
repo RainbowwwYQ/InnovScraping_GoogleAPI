@@ -11,7 +11,7 @@ import string
 # please notice: no comma in original documents!
 
 df = pd.read_csv("GoogleAPI_all.csv", encoding= 'unicode_escape') 
-remove_url = pd.read_csv("remove.csv").drop_duplicates()
+remove_url = pd.read_csv("remove_list.csv").drop_duplicates()
 
 # change the file name if it is different from yours!!
 
@@ -20,31 +20,19 @@ remove_url = pd.read_csv("remove.csv").drop_duplicates()
 def remove(dataframe, col):
     
     remove_head = ["www","http"]
-    remove_tail = ["com","ca","org","net","au","us","gov","eu","edu","io","es",
-                   "uk","ie","st","it","cn"]
+
     dataframe["new_links"] = None  # the links used to compare
-    dataframe["search_links"] = None  # the links used to scrape
     
     for i in range(len(dataframe)):
     
         temp = dataframe.iloc[i,int(col)]
-#        temp2 = dataframe.iloc[i,int(col)]
 
         for m in remove_head:
             if (temp.startswith('.') != True) and (m in temp):
                     temp = temp.lstrip(m).strip(string.punctuation)
-                    
-        temp2 = temp 
         
-        for n in remove_tail:
-            if (temp.endswith('.') != True) and (n in temp):
-                    temp = temp.rstrip(n).strip(string.punctuation)
-        
-        index = dataframe.columns.get_loc("new_links")
-        index2 = dataframe.columns.get_loc("search_links")
-        
+        index = dataframe.columns.get_loc("new_links") 
         dataframe.iloc[i,index] = temp
-        dataframe.iloc[i,index2] = temp2
     
     
 remove(remove_url, 0) # which column you put the links
@@ -70,17 +58,4 @@ print(f'You have removed {diff} high-frequency URLs!')
 df.to_csv("GoogleAPI_cleaned.csv", index = False, sep=',')
 
 # df is data frame we obtain. transfer df to next py file
-
-            
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
